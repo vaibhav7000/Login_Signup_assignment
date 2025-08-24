@@ -7,7 +7,7 @@ interface TextProps extends HTMLAttributes<HTMLDivElement> {};
 const Text: React.FC<TextProps> = (props) => {
 
     return (
-        <div onClick={props.onClick} className={merge("text-base text-black",props.className)}>
+        <div onClick={props.onClick} className={merge("text-black",props.className)}>
             {props.children}
         </div>
     )

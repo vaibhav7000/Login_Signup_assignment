@@ -48,8 +48,8 @@ const Login = () => {
         <Container className="flex flex-col gap-y-32">
 
             <HeadingWrapper className="flex flex-col items-center gap-y-3">
-                <PrimaryHeading className="font-normal xl:text-5xl tracking-wider" title="Login" />
-                <SecondaryHeading title="Sign in to continue" className="font-thin tracking-widest" />
+                <PrimaryHeading className="font-normal text-5xl tracking-wider" title="Login" />
+                <SecondaryHeading title="Sign in to continue" className="font-thin text-2xl tracking-widest" />
             </HeadingWrapper>
 
             <div className="flex flex-col items-center gap-y-9">
@@ -57,13 +57,13 @@ const Login = () => {
                 <Input ref={usernameRef} id="username" className="px-4 pt-4 text-xl h-16 border-b-gray-400 outline-0 w-full peer focus:border-b-custom-green border-b-2" label={{
                     className: "absolute capitalize text-sm text-gray-500 left-4 top-0 font-light peer-placeholder-shown:top-[25%] peer-placeholder-shown:text-xl  peer-focus:text-sm peer-focus:top-0 peer-focus:text-custom-green peer-focus:font-medium transition-all duration-300",
                 }} containerProps={{
-                    className: "flex w-1/3 relative"
+                    className: "flex xl:w-1/2 sm:w-1/2 w-3/4 relative"
                 }} labelTitle="Username" placeholder="" />
 
                 <Input type={showPassword ? "text" : "password"} ref={passwordRef} id="password" className="px-4 pt-4 text-xl h-16 border-b-gray-400 outline-0 w-full peer focus:border-b-custom-green border-b-2" label={{
                     className: "absolute capitalize text-sm text-gray-500 left-4 top-0 font-light peer-placeholder-shown:top-[25%] peer-placeholder-shown:text-xl  peer-focus:text-sm peer-focus:top-0 peer-focus:text-custom-green peer-focus:font-medium transition-all duration-300",
                 }} containerProps={{
-                    className: "flex w-1/3 relative"
+                    className: "flex xl:w-1/2 sm:w-1/2 w-3/4 relative"
                 }} labelTitle="Password" placeholder="" Icon={<IconWrapper onClick={(event: React.MouseEvent<HTMLDivElement>) => {
                     setShowPassword(val => !val);
                 }} Component={showPassword ? EyeClosed : Eye} Componentprops={{
@@ -75,7 +75,7 @@ const Login = () => {
                         Login
                     </Button>
 
-                    <Container className="flex flex-row gap-x-1 font-normal">
+                    <Container className="flex flex-row gap-x-1 font-normal text-base ">
                         <Text>Don't have Account?</Text>
                         <Text className="underline cursor-pointer" onClick={() => {
                             navigate("/register", {
