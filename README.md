@@ -20,3 +20,11 @@ This is a simple React + TypeScript project implementing login and signup functi
 ### 3. Start the Application
 ```Start
 - npm run dev
+```
+
+### 4. Routes in Application
+```
+  /register -> Go to the register screen
+  /login -> Go to the login screen
+
+```
